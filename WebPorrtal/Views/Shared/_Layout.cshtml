@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head style="width: 100%">
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header style="width: 100%">
+        
+        <div style="background-color: green">
+            <input class="toplinkbtn" id="dashboardsbtn" value="DashBoards" type="button" onclick="" />
+            <input class="toplinkbtn" id="diagrams" value="Diagrams" type="button" onclick="" />
+            <input class="toplinkbtn" id="tables" value="Tables" type="button" onclick="" />
+            <input class="toplinkbtn" id="reports" value="Reports" type="button" onclick="" />
+
+        </div>
+        <br style="background-color: white; height: 5px" />
+        <table style="width: 100%; height: 100px">
+            <tr style="background-color: #009600; height: 100%;">
+                @*logo and title part*@
+                <td style="background-color: white; width: 15%; border-style: solid">
+                    <img src="~/Images/schneider_logo.jpg" id="logo" style="width: 150px; margin-left: 25px; height: 70px; background-color: white;" />
+                </td>
+                <td style="width: 45%; height: 100%; border: solid 1px #009600; border-top-left-radius: 10px; border-bottom-right-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 10px;">
+
+                    <h1 style="font-size: 1.5em; margin-bottom: 10px; margin-left: 80px; margin-top: 10px;">Bay Status Display System
+                        <br style="height: 0px" />
+                        Schneider Electric-ITBU(APC) Factory, Bangalore </h1>
+                </td>
+                <td style="width: 20%; height: 100%">
+                    <input type="image" alt="submit" src="~/Images/green-home-icon.png" style="height: 50px; width: 50px; text-align: left; margin-left: 150px; margin-bottom: 20px; background-color: #009600; border-color: #009600" id="home" />
+                </td>
+                <td style="width: 20%; height: 100%; border: solid 1px #009600; border-top-left-radius: 0px; border-bottom-right-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 0px;">
+                    <img src="~/Images/logo1.png" id="slogo" style="height: 80px; width: 150px; background-color: white; text-align: right; margin-right: 0px; margin-left: 100px; margin-bottom: 5px" />
+                </td>
+            </tr>
+        </table>
+    </header>
+
+    <table id="body" style="width: 100%; height: 500px; background-color: white">
+        <tr>
+            <td style="width: 15%;">
+                <div class="sidelinkborder">
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="Home" value="Home" type="button" onclick="" />
+                    <br style="height: 10px" />
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="RealTime" value="Real Time" type="button" onclick="" />
+                    <br style="height: 10px" />
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="Communication" value="Communication" type="button" onclick="" />
+                    <br style="height: 10px" />
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="SingleLine" value="Single Line" type="button" onclick="" />
+                    <br style="height: 10px" />
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="PowerQuality" value="Power Quality" type="button" onclick="" />
+                    <br style="height: 10px" />
+                    <input class="sidelinkbtn" onmouseover="dark(this)" onmouseout="light(this)" id="KPIReports" value="KPI Reports" type="button" onclick="" />
+                    <br style="height: 20px" />
+                </div>
+                <img src="~/Images/energy efficiency.png" id="effimg" style="height: 100px; width: 100px; margin-bottom: 60px;" />
+                <br style="height: 10px" />
+            </td>
+            @RenderSection("featured", required: false)
+            <td class="renderbody">
+                @RenderBody()
+            </td>
+        </tr>
+
+    </table>
+
+    <footer style="background-color: #009600; height: 10px; width: 100%; color: white; font-size: 1em;border: solid 2px #009600;border-top-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px;">
+        <p style="margin-left: 100px; margin-bottom: 10px;margin-left: 10px;  ">
+            Bay Status Display System for Schneider Electric-ITBU(APC) Factory, Bangalore-Developed By Ideonics - ideas &amp; electronics
+        </p>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

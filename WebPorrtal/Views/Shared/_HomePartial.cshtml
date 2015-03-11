@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Partial Page";
+}
+<table class="p_viewtable">
+    <tr>
+        <td class="p_viewcell">
+            @Html.Label("Real Power Total Building", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox",@Disable="true"})
+        </td>
+        <td class="p_viewcell">
+            @Html.Label("Energy Consumption This Month", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox", style = "width:50px" })
+        </td>
+        <td class="p_viewcell">
+            @Html.Label("DG Energy Consumption This Month", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox", style = "width:50px" })
+        </td>
+    
+        <td class="p_viewcell">
+            @Html.Label("CO2 Emissions This Month", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox", style = "width:50px" })
+        </td>
+        <td class="p_viewcell">
+            @Html.Label("Energy Cost This Month(Rs)", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox", style = "width:50px" })
+        </td>
+        <td class="p_viewcell">
+            @Html.Label("DG Energy Cost This Month(Rs)", new { @class = "lbl" })
+            @Html.Editor("0", new { @class = "textbox", style = "width:50px" })
+        </td>
+    </tr>
+
+</table>

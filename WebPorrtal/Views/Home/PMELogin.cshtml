@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "PMELogin";
+    Layout = null;
+}
+
+<table class="logintable" >
+
+    <tr style="height:10%;  width:100%; ">
+        <td style="text-align:center; font-size:1.5em;border-bottom:solid 2px #33b41f;"><img src="~/Images/Plug.png" id="PMEimg" style="width:100px;height:75%;" />Power Monitoring Expert-7.2</td><td style="border-bottom:solid 2px #33b41f"></td>
+    </tr>
+    <tr style="height:30px; width:100%">
+
+    </tr>
+    <tr style="height:10%; width:100%;">
+        <td>
+            
+        <input id="radio" class="radio" type="radio" value="Log in as Visitor" style="color:#808080;height:100%; margin-left:60%;" >Log in as Visitor<br style="height:1px" />
+            </td>
+    </tr>
+    <tr style="height:10%; width:100%; text-align:center">
+        <td style="height:100%; width:50%;text-align:right;">
+          
+                    @Html.Label("UserName", new {@class="lbl" })
+            </td>
+        <td style="height:100%; width:50%; text-align:left ">
+                    @Html.Editor("0", new {@class="textbox" })
+            </td>
+        </tr>
+    <tr style="height:10%; width:100%; text-align:center">
+        <td style="height:100%; width:50%;text-align:right">
+            @Html.Label("Password", new {@class="lbl" })
+        </td >
+        <td style="height:100%; width:50%; text-align:left">
+                    @Html.Editor("0", new {@class="textbox" })
+                
+                    
+         </td>
+    </tr>
+    <tr style="height:5%; width:100%">
+        <td>
+            <input id="login" value="LogIn" type="submit" style="width:100px;height:100%; margin-left:100%; background-color:#e6e3e3; color:#636060"/>
+        </td>
+    </tr>
+    <tr style="height:40%; width:100%">
+        <td style="height:100%; width:70%">
+            <p style="margin-left:10px; margin-bottom:10px; height:100%; color:#808080; text-align:left"><br style="height:1px" />This program is protected by copyright and international treaties<br style="height:1px" /> 
+                Schneider Electric All Rights Reserved <br style="height:1px" /> ©Ideonics - ideas &amp; electronics</p>
+        </td>
+        <td  style="height:100%; width:30%">
+            <img src="~/Images/struxureware-logo.png" id="stwlogo" style="height:50%;width:200px; text-align:right" />
+        </td>
+    </tr>
+
+</table>
+   
